@@ -5,6 +5,7 @@ import {useWeatherStore} from "@/stores/weather";
 import {storeToRefs} from "pinia";
 import getTodayWeather from "@/services/getTodayWeather";
 import getAirQuality from "@/services/getAirQuality";
+import getWeekWeather from "@/services/getWeekWeather";
 const weatherStore = useWeatherStore()
 
 const {latitude, longitude} = storeToRefs(weatherStore)
@@ -22,6 +23,7 @@ const geocodeCity = async () => {
   longitude.value = cityLanLon.value.lon
   await getTodayWeather()
   await getAirQuality()
+  await getWeekWeather()
 
   citySearch.value = ""
 }

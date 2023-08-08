@@ -41,7 +41,7 @@ const showMore = ref<boolean>(false)
 </script>
 
 <template>
-  <div class="w-2/3 pt-10 pr-10">
+  <div class="w-2/3 pt-10">
     <div class="grid grid-cols-3 gap-8">
       <div class="bg-white p-8 rounded-lg shadow-lg aspect-square flex flex-col items-start justify-between">
         <div>

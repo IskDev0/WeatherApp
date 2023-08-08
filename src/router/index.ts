@@ -3,11 +3,17 @@ import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  linkActiveClass: "font-bold py-2 px-4 bg-gray-200",
   routes: [
     {
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/week',
+      name: 'week',
+      component: () => import("../views/WeekView.vue")
     }
   ]
 })

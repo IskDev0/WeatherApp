@@ -21,8 +21,5 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="flex gap-20">
-    <CurrentWeatherAside v-if="todayWeather" :todayWeather="todayWeather"/>
     <CurrentWeather v-if="todayWeather" :todayWeather="todayWeather" :airQuality="airQuality"/>
-  </div>
 </template>

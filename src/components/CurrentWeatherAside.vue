@@ -16,9 +16,14 @@ defineProps({
       <img class="h-32" :src="` https://openweathermap.org/img/wn/${todayWeather?.weather[0]?.icon}@2x.png`" :alt="todayWeather?.weather[0]?.main">
       <p class="font-semibold"><span class="text-5xl">{{Math.round(todayWeather?.main?.temp)}}</span>°C</p>
     </div>
-    <div class="flex flex-col">
-      <p>{{todayWeather?.weather?.[0]?.description}}</p>
+    <div class="flex flex-col items-center">
+      <p class="font-semibold text-xl">{{todayWeather?.weather?.[0]?.description}}</p>
       <p>{{todayWeather?.name}}, {{todayWeather?.sys.country}}</p>
+    </div>
+
+    <div class="flex items-center gap-4">
+    <RouterLink to="/">Today</RouterLink>
+    <RouterLink to="week">Week</RouterLink>
     </div>
   </aside>
 </template>
