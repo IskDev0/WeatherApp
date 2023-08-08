@@ -18,6 +18,10 @@ function getDirection(degrees:number):string {
     } else if (degrees >= 337.5 && degrees <= 360) {
         return "North";
     }
+
+    else {
+        return "Unknown"
+    }
 }
 
 export default getDirection
