@@ -5,6 +5,10 @@ export const useWeatherStore = defineStore('weather', () => {
   const latitude = ref<number>()
   const longitude = ref<number>()
 
+  const todayWeather = ref()
 
-  return {latitude,longitude }
+  const airQuality = ref()
+
+
+  return {latitude,longitude, todayWeather, airQuality }
 })

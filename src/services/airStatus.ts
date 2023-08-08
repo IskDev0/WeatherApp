@@ -1,21 +1,18 @@
 function getAirStatus(co: number): string {
-    if (co > 0 && co <= 50){
-        return "Good";
+    if (co > 0 && co <= 25){
+        return "Very Low";
     }
-    else if (co > 51 && co <= 100){
-        return "Moderate";
+    else if (co > 50 && co <= 100){
+        return "Low";
     }
-    else if (co > 101 && co < 150){
-        return "Unhealthy for sensitive groups";
+    else if (co > 100 && co <= 200){
+        return "Medium";
     }
-    else if (co > 151 && co < 200){
-        return "Unhealthy";
+    else if (co > 200 && co <= 400){
+        return "High";
     }
-    else if (co > 201 && co <= 500){
-        return "Very unhealthy";
-    }
-    else if (co > 501 && co <= 1000){
-        return "Very Hazardous";
+    else if (co > 400){
+        return "Very High";
     }
     else {
         return "Unknown";
