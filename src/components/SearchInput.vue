@@ -16,7 +16,7 @@ const cityLanLon = ref({})
 
 const citySearch = ref()
 const geocodeCity = async () => {
-  const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${citySearch.value}&limit=1&appid=${api_key}`)
+  const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${citySearch.value}&limit=1&appid=${api_key}`)
   const data = await response.json()
   cityLanLon.value = data[0]
   latitude.value = cityLanLon.value.lat
