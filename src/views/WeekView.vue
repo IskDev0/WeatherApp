@@ -19,7 +19,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="md:w-2/3 grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6 p-4 min-h-screen md:mr-4">
+  <div class="md:w-2/3 grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6 p-4 h-screen md:mr-4 overflow-auto">
     <div class="bg-white py-2 px-6 rounded-lg shadow-lg text-center flex flex-col items-center gap-2"
          v-for="item in weekWeather" :key="item.dt">
       <WeekItem :item="item"/>
