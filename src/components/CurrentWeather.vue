@@ -41,9 +41,10 @@ const showMore = ref<boolean>(false)
 </script>
 
 <template>
-  <div class="w-2/3 pt-10">
-    <div class="grid grid-cols-3 gap-8">
-      <div class="bg-white p-8 rounded-lg shadow-lg aspect-square flex flex-col items-start justify-between">
+  <div class="md:w-2/3 pt-10">
+    <div class="grid pb-4 md:grid-cols-2 lg:grid-cols-3 px-4 gap-8 md:mr-8">
+      <div
+          class="bg-white p-8 rounded-lg shadow-lg items-center gap-6 text-center w-full md:min-w-[200px] md:max-w-[300px] md:min-h-[300px] md:max-h-[300] flex flex-col md:items-start justify-between">
         <div>
           <p class="text-gray-500 text-xl mb-10">Wind Status</p>
           <div>
@@ -55,7 +56,8 @@ const showMore = ref<boolean>(false)
              src="/compass.svg" alt="compass">
       </div>
 
-      <div class="bg-white p-8 rounded-lg shadow-lg aspect-square">
+      <div
+          class="bg-white p-8 rounded-lg shadow-lg items-center text-center w-full md:min-w-[200px] md:max-w-[300px] md:min-h-[300px] md:max-h-[300] flex flex-col md:items-start justify-between">
         <p class="text-gray-500 text-xl mb-10">Sunrise & Sunset</p>
         <div class="flex flex-col gap-4">
           <div class="flex items-center gap-2"><img class="h-8 w-8" src="/sunrise.png" alt="">
@@ -65,21 +67,26 @@ const showMore = ref<boolean>(false)
         </div>
       </div>
 
-      <div class="bg-white p-8 rounded-lg shadow-lg aspect-square">
+      <div
+          class="bg-white p-8 rounded-lg shadow-lg items-center text-center w-full md:min-w-[200px] md:max-w-[300px] md:min-h-[300px] md:max-h-[300] flex flex-col md:items-start justify-between">
         <p class="text-gray-500 text-xl mb-10">Humidity</p>
         <div class="flex items-center gap-2">
           <img src="/humidity.svg" alt="humidity">
           <p class="font-semibold"><span class="text-5xl"> {{ todayWeather.main.humidity }}</span> %</p>
         </div>
       </div>
-      <div class="bg-white p-8 rounded-lg shadow-lg aspect-square">
+      <div
+          class="bg-white p-8 rounded-lg shadow-lg items-center text-center w-full md:min-w-[200px] md:max-w-[300px] md:min-h-[300px] md:max-h-[300] flex flex-col md:items-start justify-between">
         <p class="text-gray-500 text-xl mb-10">Visibility</p>
         <p class="font-semibold"><span
-            class="text-5xl">{{ todayWeather.visibility % 1000 == 0 ? todayWeather.visibility / 1000 : (todayWeather.visibility).toFixed(2) }}</span>
+            class="text-5xl">{{
+            todayWeather.visibility % 1000 == 0 ? todayWeather.visibility / 1000 : (todayWeather.visibility).toFixed(2)
+          }}</span>
           km</p>
       </div>
 
-      <div class="bg-white p-8 rounded-lg shadow-lg aspect-square">
+      <div
+          class="bg-white p-8 rounded-lg shadow-lg items-center text-center w-full md:min-w-[200px] md:max-w-[300px] md:min-h-[300px] md:max-h-[300] flex flex-col md:items-start justify-between">
         <p class="text-gray-500 text-xl mb-10">Air Quality</p>
         <p title="Carbon monoxide" class="font-bold text-3xl"><a
             href="https://en.wikipedia.org/wiki/Carbon_monoxide">{{ airQuality?.list[0]?.components.co }}</a> μg/m3</p>
@@ -106,7 +113,8 @@ const showMore = ref<boolean>(false)
         <button @click="showMore = !showMore" class="mt-4">More</button>
       </div>
 
-      <div class="bg-white p-8 rounded-lg shadow-lg aspect-square">
+      <div
+          class="bg-white p-8 rounded-lg shadow-lg items-center text-center w-full md:min-w-[200px] md:max-w-[300px] md:min-h-[300px] md:max-h-[300] flex flex-col md:items-start justify-between">
         <p class="text-gray-500 text-xl mb-10">Pressure</p>
         <p class="font-semibold"><span class="text-5xl">{{ todayWeather.main.pressure }}</span> Pa</p>
       </div>

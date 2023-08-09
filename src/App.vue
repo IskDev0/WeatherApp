@@ -10,7 +10,7 @@ const {todayWeather} = storeToRefs(weatherStore)
 </script>
 
 <template>
-  <main class="flex gap-10 bg-[#F6F6F8] h-screen">
+  <main class="flex flex-col md:flex-row gap-10 bg-[#F6F6F8] md:h-screen">
     <CurrentWeatherAside v-if="todayWeather" :todayWeather="todayWeather"/>
   <RouterView />
   </main>
